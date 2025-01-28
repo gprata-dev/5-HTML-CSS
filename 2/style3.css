@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    display: inline-block; /* para que as divs fiquem lado a lado */
+    background-color: lightgray;
+    border: 1px solid black;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+
+#espaco {
+    display: block;
+    background-color: white;
+    border: 0px;
+    height: 50px;
+}
+
+div:hover { /* pseudo-classe: relacionado ao estado */
+    background-color: gray; /* quando passar o mouse */
+}
+
+#d1 {
+    background-color: yellow;
+}
+
+#d1:hover, #d2:hover {
+    background-color: rgba(56, 156, 31, 0.5);
+}
+
+#d4 {
+    display: block;
+    background-color: white;
+}
+
+div > p { /* o p que estiver dentro da div... */
+    display: none; /* ...será escondido... */
+}
+
+div:hover > p {
+    display: block; /* ...e será mostrado ao passar o mouse */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.741);
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    color: rgb(43, 0, 0);
+    text-decoration: underline;
+}
+
+a:active { /* quando clica e segura */
+    color: rgb(228, 161, 3);
+}
+
+a::after { /* pseudo-elemento */
+    content: ' [link]';
+    text-decoration: none;
+    font-weight: normal;
+    color: rgb(96, 84, 84);
+}
+
+a::before { /* pode ser: .especial::before {...} */
+    content: '🔗';
+}
+
+.normal::before, .normal::after {
+    content: '';
+}
+
+.especial {
+    background-color: rgba(112, 151, 235, 0.459);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/html.ico" type="image/x-icon">
+        <title>Imagens Dinâmicas, Áudios e Vídeos</title>
+    </head>
+    <body>
+        <p><a href="index.html" rel="prev">Voltar para primeira página</a></p>
+        <h1>Áudios</h1>
+        <!-- <audio src="media/drakes-elegy.mp3" controls autoplay></audio> autoplay não funcionou -->
+
+        <!-- carrega apenas metadados em vez de considerar que o site carregou completamente somente após carregar o áudio-->
+        <audio preload="metadata" controls>
+            <!-- tenta carregar um por vez começando com este, se não conseguir, tenta próximo. Só gasta banda se chegar nele --> 
+            <source src="media/drakes-elegy.mp3" type="audio/mpeg">
+            <source src="media/drakes-elegy.ogg" type="audio/ogg">
+            <source src="media/drakes-elegy.wav" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduzir o audio. <a href="media/drakes-elegy.mp3" download >Clique aqui para baixar o arquivo MP3</a></p>
+        </audio>
+
+        <h1>Vídeos hospedados localmente</h1> <!-- problema: arquivos muito grandes -->
+        <video src="media/limoes.mp4" width="1000" poster="img/limoes.png" controls></video>
+        <video controls width="1000" loop autoplay muted> <!-- navegador só deixou autoplay se colocar muted -->
+            <source src="media/limoes.mp4" type="video/mp4">
+            <source src="media/limoes.m4v" type="video/m4v">
+            <source src="media/limoes.webm" type="video/webm">
+            <source src="media/limoes.ogv" type="video/ogv">
+            <p>Infelizmente seu navegador não consegue reproduzir o video. <a href="media/limoes.mp4" download >Clique aqui para baixar o arquivo MP4</a></p>
+        </video>
+
+        <h1>Vídeos externos</h1>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=gIVPMFk-_8tRO6U6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h1>Imagem dinâmica</h1>
+        <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho da janela do seu navegador.</p>
+        <picture>
+            <source media="(max-width: 725px)" srcset="img/p.png" type="image/png"> <!-- tem que ser em cima -->
+            <source media="(max-width: 1025px)" srcset="img/m.png" type="image/png">
+            <img src="img/g.png" alt="grande">
+        </picture>
+    </body>
+</html>

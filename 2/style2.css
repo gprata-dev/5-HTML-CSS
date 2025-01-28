@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* identificar fontes em qualquer site: extensão Fonts Ninja */
+/* identificar fontes em imagens: www.whatfontis.com */
+
+/* importar fonte Work Sans do fonts.google.com: "get font", "get embed code", @import */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital@1&display=swap');
+
+/* importar fontes locais */
+@font-face {
+    font-family: "Love"; /* nome que eu escolho */
+    src: url("fonts/love\ larry\ ttf.ttf") format("truetype"); /* verificar format */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: linear-gradient(to right, #3198E2, #6D59C0);
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(57, 45, 100, 0.505);
+    width: 800px;
+    padding: 15px; /* distância do texto para a borda */
+    margin: auto;
+}
+
+/* id vs. class */
+/* id: único. usar apenas uma vez por documento (usar mais: funciona mas é errado...) // poderia colocar h2#principal { ... } */
+#principal {
+    text-align: right;
+}
+
+/* class: usar quantas vezes quiser // não colocar h2.central { ... }: pode usar em outras coisas */
+.centralizar {
+    text-align: center;
+}
+
+.destaque {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+p {
+    text-align: justify;
+    text-indent: 40px;
+    font-family: cursive; /* escolhe qualquer fonte serif disponível no navegador */
+    /* font-size: 16px; padrão da maioria dos navegadores, = 1em */
+    font-size: 1.1em; /* preferência: use "em" */
+}
+
+h1 {
+    color: #400c64;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(57, 45, 100, 0.627);
+}
+
+h2 {
+    color: #6D59C0;
+    font-family: "Fredericka the Great", cursive;
+    font-size: 1.5em;
+}

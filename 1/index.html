@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/html.ico" type="image/x-icon">
+        <title>Imagens, Títulos e mais</title>
+        <style>
+            mark {
+                background-color: rgb(255, 0, 0);
+            }
+            h1 {
+                color: rgb(0, 0, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Imagens</h1>
+        <img src="img/html.webp" alt="Logo HTML5"> <!-- ctrl + espaco = autocomplete-->
+        <!-- <br> -->
+        <img src="img/css.webp" alt="Logo CSS3">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-javascript-23-1174949.png" alt="Logo JS">
+        <h1>Títulos</h1>
+        <h2>H1, H2... não serve para controlar o tamanho...</h2>
+        <h3>... mas sim a hierarquia.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, est maxime nisi deserunt ratione labore nihil et illum ullam accusamus modi esse ab architecto, porro veniam consectetur veritatis doloremque ex.</p>
+        <h3>CSS cuida do tamanho.</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate vero quidem esse itaque, at possimus? Temporibus quidem saepe officia reiciendis iste fugiat repellendus sapiente deleniti quae? Et pariatur eaque corporis?</p><br>
+        
+        <h2>Cuidado com tags antigas do HTML</h2>
+        <h3>HTML: semântica, CSS: forma, JS: interatividade</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus quam, alias sunt soluta harum veritatis tempore! Fugiat, sunt debitis laboriosam numquam iste officiis reiciendis sed maiores ducimus doloribus est!</p><br>
+        
+        <h2>Formatação</h2>
+        <h3>negrito / itálico / sublinhado / grande / pequeno / marcado</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <em>Voluptates tenetur</em>, <strong>aperiam ipsum</strong> nam atque facilis porro dolores alias <mark style="background-color: rgb(200, 255, 0);">quaerat praesentium</mark> repellat <mark style="background-color: aqua;">debitis dolor?</mark> Quod assumenda <mark>delectus tenetur rerum</mark> corrupti aut.</p> 
+        <!--seleciona o que quer, ctrl + shift + p, enter, iniciais da tag-->
+        <p><del><big>Texto grande (tag obsoleta)</big></del> e também <ins><small>texto pequeno (não obsoleta: "letras miúdas do contrato")</small></ins></p>
+        <p>x<sup>20</sup> + 3 // H<sub>2</sub>O</p>
+        <h3>Códigos (programação)</h3>
+        <p><code>document.getElementById('teste')</code> - fonte monoespaçada<br>Com identação:</p>
+        <code>
+            <pre>
+num = int(input('Digite um número'))  #oposto de dar tab: shift + tab
+if num % 2 == 0:
+    print(f'O número {num} é PAR')
+else:
+    print(f'O número {num} é IMPAR')
+            </pre>
+        </code>
+        
+        <h3>Citações:</h3>
+        <p><q>O computador é um burro muito rápido</q></p> <!-- semântica... -->
+        <blockquote cite="https://www.google.com.br">O computador é um burro muito rápido</blockquote> <!-- link não aparece mas... mecanismos de busca... -->
+        <p>Texto continua...</p>
+        <h3>Abreviações:</h3>
+        <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!<br>Passar o mouse mostra o nome da abreviatura. É confirmado que essa IA tem acesso de alguma forma ao material do Curso em Vídeo.</p>
+        <h3>Texto invertido</h3>
+        <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p><br>
+        
+        <h2>Listas</h2>
+        <h3>Listas Ordenadas</h3>
+        <ol> <!-- dentro de <ol>: type="A", "a", "I", "i", "1" e start="sempre um número"-->
+            <li>Acordar</li>
+            <li>Tomar cafe</li>
+            <li>Inseri um novo item depois e ele vai ser numerado corretamente</li>
+            <li>Ir para a faculdade</li>
+            <li>Voltar para casa</li>
+        </ol>
+        <p>Minhas linguagens favoritas</p>
+        <ol>
+            <li>Antigas</li>
+            <ol type="a">
+                <li>Clipper</li>
+                <li>Visual Basic</li>
+                <li>Fortran</li>
+                <li>Delphi</li>
+            </ol>
+            <li>Novas</li>
+            <ol type="a" start="5">
+                <li>PHP</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Kotlin</li>
+            </ol>
+        </ol>
+        <h3>Listas Nao Ordenadas</h3>
+        <ul type="disk"> <!-- dentro de <ul>: type="disk" (o padrão), "circle", "square" e "none"-->
+            <li>Pão</li>
+            <li>Laticínios</li>
+            <ul> <!-- colocou automaticamente o type="disc"-->
+                <li>Queijo</li>
+                <li>Manteiga</li>
+            </ul>
+            <li>Tomate</li>
+            <li>Arroz</li>
+            <li>Feijão</li>
+        </ul>
+        <h3>Lista de Definições</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        </dl>
+    </body>
+</html>

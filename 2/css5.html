@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/html.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style2.css">
+        <title>CSS</title>
+        <style>
+            /* EXEMPLO para saber que dá para juntar duas (na verdade 3) formas de CSS. Não é recomendado ficar colocando nos 3 ao mesmo tempo */
+            h1 {
+                /* escolhe a 1ª dispoível. se não, qualquer fonte sans-serif disponível no navegador / sempre termine com uma genérica */
+                font-family: "Love", cursive;
+                font-size: 2.5em;
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Página com CSS</h1>
+            <h2 id="principal" class="destaque">HTML</h2> <!-- se tiver conflito: id ganha -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae dolores culpa minus eum totam hic recusandae ipsa eaque explicabo. Minus, eaque. Nobis autem placeat quibusdam, maxime voluptate quos odit.</p>
+            <h2 class="destaque">CSS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam reprehenderit, fugiat impedit dignissimos ipsam numquam suscipit officia. Ipsum eveniet magnam eum facere voluptatibus doloribus dicta corporis sunt at velit.</p>
+
+            <h2 class="centralizar destaque">JavaScript</h2> <!-- herda os estilos do arquivo css externo + da clase .centralizar + classe destaque -->
+            <p class="centralizar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, itaque debitis ea ducimus doloremque delectus aliquid? Delectus culpa temporibus dicta tenetur reprehenderit facere maiores optio. Voluptas architecto consequuntur dolor cumque.</p>
+            
+            <!-- font-weight: ligher, normal, bold, bolder OU 100, 200, 300, 400, 500, 600, 700, 800, 900; font-style: normal, italic, oblique; apenas algumas fontes possuem toda essa variedade // text-decoration: none, underline, overline, line-through -->
+            <p style="font-family: 'Work Sans', sans-serif; font-size: 1em; font-weight: 300; font-style: italic; text-decoration: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, consequuntur.</p>
+            <!-- OU shorthand: "font": (posso não colocar as 4 propriedades mas deve ser nessa ordem) -->
+            <p style="font: italic 300 1em 'Work Sans', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, consequuntur.</p>
+            <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Voltar</a></p>
+        </main>
+    </body>
+</html>

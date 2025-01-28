@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/html.ico" type="image/x-icon">
+        <title>Grouping Tags</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: dimgray;
+                margin: 0px;
+            }
+
+            h2 {
+                padding: 7px;
+            }
+
+            header {
+                background-color: gray;
+                padding: 15px;
+            }
+
+            nav > a {
+                text-decoration: none;
+                color: white;
+                padding: 5px 20px 5px 20px;
+                outline: 1px solid rgb(82, 82, 82);
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* sombra: x, y, blur, espalhamento, cor //deixar 3: remove o espalhamento // configurar dentro do dev tools, botão roxo */
+            }
+
+            nav > a:hover {
+                background-color: darkgray;
+            }
+
+            main {
+                background-color: white;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 1px 10px;
+                box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.477)
+            }
+
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin: 0px;
+            }
+
+            article {
+                background-color: lightgray;
+                width: 60%;
+                text-align: justify;
+            }
+
+            article > p {
+                padding: 10px 10px 0px 10px;
+            }
+
+            article > aside {
+                background-color: rgb(165, 165, 165);
+                padding: 0px 0px 0px 1px;
+            }
+
+            aside > p {
+                padding: 2px 0px 2px 5px;
+            }
+
+            footer > p {
+                margin: 0px;
+            }
+
+            .bola {
+                display: inline-block;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                margin: 0px 0px 0px 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <header> <!-- cabeçalho // uma div mas... mecanismos de busca / mais fácil em vez de ficar colocando classes/ids -->
+            <h1>Meu Site</h1>
+            <nav>
+                <a href="index.html">Tela inicial</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <!-- <span class="bola"></span> testar só pra ver... -->
+            </nav>
+        </header>
+        <main> 
+            <section id="assuntos">
+                <!-- <p>Esportes, Politica e Tecnologia</p> -->
+            </section>
+            <section id="noticias">
+                <article>
+                    <h2>Notícia sobre o Brasil</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae, sapiente fugiat voluptas dolorum adipisci dicta doloremque veniam quos cupiditate cumque nemo perferendis quidem aliquid neque libero itaque unde eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, odit cum quaerat repellat, hic, aliquid saepe delectus ex sed praesentium quos? Cum aut deserunt sequi enim voluptas minus necessitatibus consequuntur!</p>
+                    <aside>
+                        <p>Artigo escrito por Guilherme Prata</p>
+                    </aside>
+                </article>
+            </section>
+        </main>
+        <footer> <!-- rodapé -->
+            <p>Desenvolvido por Guilherme Prata</p>
+        </footer>
+    </body>
+</html>

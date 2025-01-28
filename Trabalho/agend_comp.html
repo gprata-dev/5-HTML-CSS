@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agendamentos & Comparecimentos</title>
+        <style>
+            .teoria {
+                color: #ff9c00;
+            }
+
+            .pratica {
+                color: #085294;
+            }
+
+            .espaco {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 class="teoria">Agendamentos &amp; Comparecimentos</h3>
+        <div class="espaco"></div>
+        <p>O módulo <strong>Agendamentos &amp; Comparecimentos</strong> exibe todos os leads que realizaram agendamentos ou comparecimentos, permitindo o uso de uma variedade de filtros combináveis para obter o resultado desejado.</p>
+        <p>Todos os filtros fazem referência ao conteúdo registrado no lead. Entre estes filtros, estão presentes:</p>
+        <ul>
+            <li>Marca: Marca do veículo</li>
+            <li>Empresa: Nome da concessionária/empresa</li>
+            <li>Departamento: Nome do departamento</li>
+            <li>Tipo período: escolha Agendamento, Comparecimento, Geração ou Movimento para visualizar a opção correspondente</li>
+            <li>Data inicial da consulta</li>
+            <li>Data final da consulta</li>
+            <li>Origem: origem do lead</li>
+            <li>Sub Origem: sub origem do lead</li>
+            <li>Tipo Origem: se o lead foi criado em origem presencial ou digital</li>
+            <li>Situação: Situação do lead - Andamento, Venda Efetuada, Venda Perdida, Lead Transferido ou Todas as opções</li>
+            <li>Termômetro: temperatura atribuída ao lead que representa a probabilidade do cliente fechar negócio, da menor para a maior: frio, morno ou quente. Há também a opção "não tratado", que representa os leads sem temperatura atribuída</li>
+            <li>Perfil: nível do usuário responsável por gerar ou capturar o lead.</li>
+            <li>Resgate: nome do responsável pelo resgate</li>
+            <li>Consultor: nome do consultor</li>
+            <li>Últimas Conversas: status da conversa com o lead - Aguardando Atendimento (ainda não foi respondido nenhuma vez), Mensagem Nossa (a última mensagem enviada foi por parte do consultor) ou Mensagem Cliente (a última mensagem enviada foi por parte do lead)</li>
+            <li>Agenda Confirmada: se a agenda foi confirmada ou não por parte do lead</li>
+        </ul>
+        <div class="espaco"></div>
+        <p>Existe uma checkbox que pode ser marcada para exibir todos os agendamentos para o período selecionado.</p>
+        <p>Há ainda checkboxes que podem ser marcadas simultaneamente para exibir agendamentos e comparecimentos nos diferentes serviços disponíveis. Entre elas:</p>
+        <ul>
+            <li>Telefone</li>
+            <li>Pós Vendas</li>
+            <li>Visita</li>
+            <li>Test Drive</li>
+        </ul>
+        <div class="espaco"></div>
+        <p>Finalmente, os resultados são exibidos na parte inferior da tela com algumas colunas que podem ser clicadas para trocar a ordem de exibição. Para uma busca mais específica, há um campo de pesquisa que permite procurar por qualquer parte do conteúdo das colunas registrado no lead, como por exemplo, id do lead ou Obs (observação).</p><br>
+        <p>A maioria das colunas tem nome autoexplicativo mas alguns são detalhados a seguir:</p>
+        <ul>
+            <li>Primeira Coluna: balão com um número representando o nnúmero de interações com o lead, e a cor representando o status da conversa:
+                <ul>
+                    <li>Vermelho se a última mensagem foi do cliente ou se houve algum alerta para o consultor;</li>
+                    <li>Azul se a última mensagem foi do consultor;</li>
+                </ul>
+            <li>Segunda coluna: ícones com informações ao passar o mouse</li>
+            <li>Coluna Obs: observações</li>
+            <li>SLA: tempo que leva para que um cliente receba a primeira resposta após abrir uma conversa</li>
+            <li>Coluna com ícones de sinos amarelos: botão de sinalizar consultor</li>
+        </ul>
+    </body>
+</html>
