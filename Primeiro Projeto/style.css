@@ -94,7 +94,7 @@ main {
 .video {
     position: relative;
     background-color: var(--cor5);
-    margin: 15px -40px 30px -40px;
+    margin: 15px -35px 30px -35px;
     padding: 20px 20px 58.5% 20px;
 }
 
@@ -129,8 +129,10 @@ main h2 {
 }
 
 main img {
-    width: calc(100% + 80px);
-    margin: 0px -40px;
+    display: block;
+    margin: auto;
+    width: calc(100% + 70px);
+    margin: 0px -35px;
 }
 
 main img.media {
