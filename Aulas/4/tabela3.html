@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabelas</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            table {
+                margin-top: 70px;
+                border-collapse: collapse;
+            }
+
+            thead {
+                background-color: gray;
+            }
+
+            td, th {
+                border: 1px solid black;
+                width: 100px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            p {
+                margin-top: 70px;
+            }
+
+            h1 {
+                margin-top: 100px;
+            }
+
+            .disciplina {
+                text-align: left;
+            }
+
+            .media {
+                text-align: left;
+                background-color: gray;
+                color: white;
+            }
+
+            .cnome {
+                background-color: lightsteelblue;
+            }
+
+            .cfilme {
+                background-color: rgb(255, 253, 231);
+            }
+
+            .grande {
+                width: 1980px;
+            }
+
+            div#container {
+                overflow-x: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Mesclagem de Celulas</h1>
+        <table>
+            <tr>
+                <td>A</td>
+                <td colspan="2">B</td>
+            </tr>
+            <tr>
+                <td rowspan="3">D</td>
+                <td>E</td>
+                <td rowspan="2">F</td>
+            </tr>
+            <tr>
+                <td>H</td>
+            </tr>
+            <tr>
+                <td colspan="2">K</td>
+            </tr>
+        </table>
+        <table> 
+            <colgroup>              <!-- sempre respectivamente / útil para fazer tabelas zebradas -->
+                <col class="cgrupo">
+                <col class="cnome">
+                <col class="cfilme" span="3">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th scope="colgroup" colspan="3">Filmes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Mulheres</th>
+                    <td>Ana</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+                <tr>
+                    <td>Beatriz</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Claudia</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big Hero</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Homens</th>
+                    <td>Roberto</td>
+                    <td>Intocaveis</td>
+                    <td>Amnésia</td>
+                    <td>Gladiador</td>
+                </tr>
+                <tr>
+                    <td>Daniel</td>
+                    <td>Wall-E</td>
+                    <td>Oldboy</td>
+                    <td>Dangal</td>
+                </tr>
+                <tr>
+                    <td>Fabiano</td>
+                    <td>Star Wars 5</td>
+                    <td>Taxi Driver</td>
+                    <td>Toy Story</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2" scope="col">Área</th>
+                    <th rowspan="2" scope="col">Disciplinas</th>
+                    <th colspan="2" scope="colgroup">Notas</th>
+                    <th rowspan="2" scope="col">Média</th>
+                </tr>
+                <tr>
+                    <th scope="col">Nota 1</th>
+                    <th scope="col">Nota 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="4" scope="rowgroup">Exatas</th>
+                    <td class="disciplina">Matemática</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplina">Física</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplina">Química</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplina">Biologia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <th colspan="4" class="media" scope="row">Média de Exatas</th>
+                    <td style="text-align: center;" class="media">0.0</td>
+                </tr>
+                <tr>
+                    <th rowspan="2" scope="rowgroup">Humanas</th>
+                    <td class="disciplina">Historia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplina">Geografia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <th colspan="4" class="media" scope="row">Média de Humanas</th>
+                    <td style="text-align: center;" class="media">0.0</td>
+                </tr>
+        </table>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et esse molestias nisi culpa commodi? Fugit quod, veritatis inventore in eius, necessitatibus minus sed non sint vitae tenetur, dolorum obcaecati laboriosam maiores. Aliquam ut velit optio consequatur, saepe natus, rem veniam laudantium distinctio animi debitis. Provident recusandae nostrum voluptatum iure culpa dolore ut harum nam odio ex ipsa blanditiis aspernatur adipisci, quisquam eligendi unde facilis nulla perferendis in facere eveniet numquam veniam minima? Repellendus reiciendis, corporis officiis in ducimus laborum sed nemo ut. Eos, corrupti repudiandae enim consequatur itaque nam quis libero delectus aut laudantium quas sint iusto cum optio harum, quod reprehenderit vel quam ea iure eveniet. Assumenda earum autem, illum nobis fugit ratione. Ex impedit dolorum odio, placeat eaque maiores consectetur in dolores totam animi cum quis laborum iure nemo, tempora sapiente facere. Ad numquam aut, voluptas animi, magni vero harum accusantium id, et nulla delectus? Sequi modi voluptates laboriosam quo? Eum doloribus dolorem ipsam asperiores distinctio veniam, praesentium illo nam error, rem corrupti? Sunt molestiae consequatur deleniti temporibus ipsam, nobis maiores architecto consequuntur minus sit quibusdam, officiis quia ipsum asperiores delectus corrupti facilis hic consectetur natus? Ipsum exercitationem debitis eaque. Quod a atque, nisi itaque amet sequi quasi eius, architecto exercitationem eligendi hic repellendus tempore animi? Harum commodi quae doloribus, qui ab sit nemo rerum recusandae ad. Veniam, placeat voluptatibus eveniet eos sint harum laudantium mollitia vel eaque quisquam debitis facilis animi ullam tempore aperiam explicabo consequatur quos! Culpa architecto odit mollitia quis ab illo ad, vel aspernatur incidunt eaque provident unde numquam qui voluptate blanditiis explicabo molestiae excepturi totam aliquam, perferendis beatae? Officiis, consequatur! Illo facere tenetur sed quaerat sequi placeat! Ab fuga quaerat autem! A ipsam fugiat, laudantium ad quos impedit in repellendus ipsa perspiciatis, dolor, aspernatur praesentium tenetur quam quidem? Quibusdam, a iste est qui provident animi ipsam ad tempore nobis dolores officia ex aliquam modi nulla voluptas perferendis, dolorum in nihil voluptate voluptatibus, doloribus ut. Voluptatum, amet maiores pariatur laudantium accusantium repudiandae? Officia molestias tempora odio quisquam perferendis autem nulla debitis magnam modi ut possimus voluptatem atque veritatis magni similique doloribus temporibus, consectetur hic quibusdam, officiis praesentium nihil repellat eum? Numquam repellendus omnis quis quas autem maxime, iusto explicabo similique recusandae! Recusandae tempore quis facere nam ea culpa quo quibusdam deserunt architecto eligendi cum reiciendis veritatis consequatur aliquid laudantium perferendis repellendus minima at, dicta fuga quos aut nobis, totam earum! Et earum eveniet repellendus aspernatur illo, animi dolor minima ut accusamus, dolores consequuntur nobis doloremque corrupti non reprehenderit temporibus eligendi totam quisquam similique! Suscipit, voluptatibus odit corrupti voluptate voluptatem explicabo rem at fugit architecto, voluptas minima excepturi nemo similique porro perferendis impedit accusamus nobis nulla, necessitatibus adipisci praesentium ut. Facere rem quia quaerat ratione non. Voluptatem magnam saepe illo assumenda! Aliquam commodi sit veritatis, iure, totam atque odio est velit nam fuga officia quisquam repellat perspiciatis beatae recusandae nulla possimus, inventore vel. Nam velit veniam optio rerum a pariatur doloribus, minus excepturi soluta ut cupiditate eveniet! Sed quaerat accusamus debitis vitae dolor dicta consequatur.</p>
+        <h1>Tabelas responsivas</h1>
+        <div id="container">
+            <table class="grande">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Jan</th>
+                        <th>Fev</th>
+                        <th>Mar</th>
+                        <th>Abr</th>
+                        <th>Mai</th>
+                        <th>Jun</th>
+                        <th>Jul</th>
+                        <th>Ago</th>
+                        <th>Set</th>
+                        <th>Out</th>
+                        <th>Nov</th>
+                        <th>Dez</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TV 40"</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>07</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>05</td>
+                        <td>02</td>
+                        <td>01</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Home Theater</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>07</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>05</td>
+                        <td>02</td>
+                        <td>01</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Samsung Galaxy S20</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>07</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>05</td>
+                        <td>02</td>
+                        <td>01</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>iPad Mini</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>07</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>05</td>
+                        <td>02</td>
+                        <td>01</td>
+                        <td>01</td>
+                        <td>04</td>
+                        <td>16</td>
+                    </tr>
+            </table>
+        </div>
+        <p><a href="index.html" target="_self" rel="prev">Voltar</a></p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores laboriosam perspiciatis sunt maxime alias veniam similique veritatis perferendis quia in atque dolor aliquid aut aperiam eos molestiae itaque quasi, beatae consequatur aspernatur dicta ab. Quasi, est. Asperiores necessitatibus iure velit veniam repellendus placeat possimus architecto cumque ducimus debitis! Unde ipsam qui quaerat. Placeat nostrum pariatur, id consequatur neque perspiciatis quod. Nemo neque minus in possimus, at reiciendis sint minima voluptate. Ipsa perspiciatis vero, ut veritatis adipisci impedit provident, itaque inventore porro tempore quas nesciunt saepe eos et amet placeat tempora assumenda ducimus, eius cupiditate pariatur dolorum sit? Qui nihil voluptas ipsa quo corrupti sequi suscipit, ullam sit dolores magnam officiis quis molestias ab, itaque fugiat! Quod laboriosam quis, odio qui dolorum officiis modi minus, rem dignissimos a, ex vitae? Impedit iusto, neque ratione illum qui inventore, quo nemo non, fugiat laboriosam sed officiis alias esse quidem rem maxime iure! Alias, sint officiis. Natus, libero. Quod facilis fugit ut, corporis maiores, similique praesentium, error modi perspiciatis officia saepe veniam quaerat vitae quasi ea! Velit illo inventore architecto at laborum nihil placeat consequatur nobis, praesentium obcaecati nostrum repellendus doloribus laudantium nulla. Cum dolore vitae cumque natus asperiores inventore non ratione odio nemo voluptates sed ipsa nihil officiis iure repudiandae quos pariatur dolorem voluptatibus facere, eos nam consectetur distinctio. Nesciunt necessitatibus, quo obcaecati modi voluptates tenetur esse delectus aliquid aliquam sed ea! Accusantium, repudiandae voluptatum. Sed nesciunt corrupti praesentium error fugiat molestiae pariatur, minus, maiores veritatis magnam tempora eveniet dolores, nulla repellat laboriosam. Quis a, aut modi eligendi dolorem ratione dolor ex laborum facere beatae unde voluptatibus aliquid consequatur iure vel nostrum quas suscipit vitae. Dignissimos vitae perferendis quae nam cupiditate molestias alias dolorem deserunt totam ipsam autem hic maxime fuga omnis deleniti facere, eius blanditiis, ab unde reprehenderit laborum sed. Officia dolorum fugit libero eius quod ipsa! Dolore expedita unde eveniet possimus ab, quis, fugit quia repellendus ad nostrum odio impedit harum saepe et hic! Quam animi consectetur earum delectus accusamus recusandae, ut consequatur vel rem sapiente fugiat, dolores doloribus dolorem laboriosam ipsum voluptatibus sit, ratione est eius deserunt culpa temporibus doloremque odio? Dicta alias voluptas fugiat, dolores nam totam pariatur accusamus officia atque doloremque harum velit, mollitia debitis molestiae suscipit sequi, vitae nemo? Reprehenderit nisi nobis sapiente, odio commodi voluptatem porro et explicabo pariatur sint, obcaecati ea ad doloremque consequuntur! Nostrum obcaecati quia amet minima rerum, quo a nisi quasi in dolores corrupti vero tempore aspernatur architecto harum tenetur distinctio nihil facilis cumque molestiae sequi. Aliquam ab delectus, quos aperiam consequatur optio quis deleniti, facere, necessitatibus corrupti incidunt sequi. Recusandae beatae ab quo quos odio consequuntur quaerat magnam inventore iure fugiat veniam dolorem aliquid, nemo facere, praesentium iusto expedita. Asperiores fugit quasi amet iste incidunt sed! Ullam nulla illo consequuntur fugiat quas iure veniam necessitatibus modi pariatur, dolor iste explicabo aspernatur reprehenderit cupiditate laudantium tempora hic optio! Necessitatibus eius rerum, perspiciatis quam aliquid nesciunt laborum eveniet corporis debitis obcaecati sequi fuga ullam, eligendi dolore dignissimos consequuntur magni nisi quas voluptatem qui.</p>
+    </body>
+</html>
