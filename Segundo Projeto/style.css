@@ -30,11 +30,11 @@ header > h1 {
     /* transformar tudo em maiúsculo: text-transform: uppercase */
     font-variant: small-caps; /* transformar em maiúsculo, mas com a primeira letra maior */
     font-family: var(--fonte2);
-    font-size: max(9vw, 50px);
+    font-size: max(9vw, 70px);
 }
 
 header > p {
-    font-size: max(1.3vw, 10px);
+    font-size: max(1.3vw, 13px);
     padding-bottom: 50px;
 }
 
@@ -58,7 +58,8 @@ section {
 }
 
 section > p {
-    font-size: max(2vw, 15px);
+    font-size: max(2vw, 20px);
+    line-height: 1.7em;
     padding-bottom: 2em;
 }
 
@@ -103,5 +104,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: max(1.1vw, 10px);
+    font-size: max(1.1vw, 13px);
 }
