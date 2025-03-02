@@ -20,23 +20,25 @@ main {
 }
 
 #telefone {
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: 685px;
-    width: 353px;
+    height: 780px;
+    width: 400px;
 
     background: url('../img/smartphone.png') no-repeat;
+    background-size: cover;
 }
 
 iframe#tela {
     position: relative;
-    top: 23px;
-    left: 26px;
-    height: 640px;
-    width: 305px;
+    top: 26px;
+    left: 30px;
+    height: 728px;
+    width: 345px;
     border-radius: 40px;
 }
 
@@ -68,3 +70,10 @@ iframe#tela {
     height: 33vh;
 }
 
+section#projetos p {
+    margin-top: 65px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.308);
+    font-size: 1em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
