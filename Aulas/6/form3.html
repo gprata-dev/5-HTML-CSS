@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulários</title>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            fieldset {
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Dados Escolares</legend>
+                <p>
+                    <label for="imedia">Média:</label>
+                    <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" required placeholder="0 a 10" size="100">
+                </p>
+                <p>
+                    <label for="imes">Período Letivo:</label>
+                    <input type="month" name="mes" id="imes" required value="2022-12">
+                </p>
+                <p>
+                    <label for="idia">Dia da Prova:</label>
+                    <input type="date" name="dia" id="idia" required>
+                </p>
+                <p>
+                    <label for="ihora">Horário da Prova:</label>
+                    <input type="time" name="hora" id="ihora" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <p>
+                    <label for="iemail" for="iemail">Email:</label>
+                    <input type="email" name="email" id="iemail" required></label>
+                </p>
+                <p>
+                    <label for="itel">Telefone:</label>
+                    <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^[0-9]{8, 9}$" placeholder="xxxx-xxxx">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sexo</legend>
+                <p>
+                    <input type="radio" name="sexo" id="imasc" value="M" checked>
+                    <label for="imasc">Masculino</label>
+                </p>
+                <p>
+                    <input type="radio" name="sexo" id="ifem" value="F">
+                    <label for="ifem">Feminino</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Esportes Favoritos</legend>
+                <p>
+                    <input type="checkbox" name="futebol" id="ifutebol" checked>
+                    <label for="ifutebol">Futebol</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="basquete" id="ibasquete">
+                    <label for="ibasquete">Basquete</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="volei" id="ivolei">
+                    <label for="ivolei">Volei</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha uma cor:</legend>
+                <p>
+                    <input type="color" name="cor" id="icor" value="#ff0000">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Nível de Satisfação</legend>
+                <p>
+                    <input type="range" name="satis" id="isatis" min="1" max="5">
+                    <label for="isatis">1 a 5</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Arquivos</legend>
+                <p>
+                    <input type="file" name="arquivo" id="iarquivo">
+                </p>
+            </fieldset>
+            
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </body>
+</html>
