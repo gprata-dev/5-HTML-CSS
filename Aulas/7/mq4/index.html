@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu site</h1>
+        <i id="burger" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+                <li><a href="#">Item 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Testando media queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, tempore. Blanditiis quaerat odio harum, distinctio voluptas sit ipsam quisquam illum praesentium laudantium doloremque rerum delectus numquam tempora voluptate quasi? Officia, quia necessitatibus! Laudantium magnam similique, dolorum totam consectetur nihil voluptate magni animi facere reiciendis accusantium modi, iste neque laborum suscipit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sed labore sapiente esse voluptates quasi quae aspernatur fuga sint itaque quisquam vitae et, corrupti ea autem. Distinctio quis in doloribus, pariatur soluta ratione assumenda hic perspiciatis saepe id similique! Delectus ea cum cupiditate architecto amet, similique quis consectetur iure quisquam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, pariatur? Similique, beatae maiores. Dolores quis tempore commodi reprehenderit amet quam, quidem accusamus incidunt ad? Excepturi fugiat impedit nostrum maiores, commodi qui. Consequuntur placeat a, culpa aspernatur aliquid praesentium nostrum, animi pariatur eum iure, accusantium natus quae numquam vel debitis facere!</p>
+        </article>
+    </main>
+
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+
+        function clickMenu() {
+            if (itens.style.display == 'none') {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "editor.foreground": "#b1b1b1",   
+        "editor.lineHighlightBackground": "#3737375f",
+        "editor.selectionBackground": "#323f76c4",
+        "editor.selectionHighlightBackground": "#222222",
+
+        
+        "sideBar.background": "#000000",  
+        "sideBar.foreground": "#B0B0B0",  
+        "sideBar.border": "#3531446e",  
+        "sideBarSectionHeader.background": "#111111",  
+        "sideBarSectionHeader.foreground": "#CCCCCC",
+
+        "activityBar.background": "#101010", 
+        "activityBar.foreground": "#a7c6f3",
+        "activityBar.inactiveForeground": "#777777"
+    }
+}

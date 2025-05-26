@@ -5,44 +5,101 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulários</title>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            fieldset {
+                margin-top: 30px;
+            }    
+        </style>
     </head>
     <body>
         <h1>Formulários</h1>
         <form action="cadastro.php" method="post" autocomplete="on">
-            <p>
-                <label for="iestado">Estado:</label>
-                <select name="estado" id="iestado">
-                    <option value="" selected>--- Escolha ---</option>
-                    
-                    <optgroup label="Região Sudeste">
-                        <option value="MG">Minas Gerais</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="ES">Espírito Santo</option>
-                    </optgroup>
-                </select>
-            </p>
+            <fieldset>
+                <legend>Select</legend>
+                <p>
+                    <label for="iestado">Estado:</label>
+                    <select name="estado" id="iestado">
+                        <option value="" selected>--- Escolha ---</option>
+                
+                        <optgroup label="Região Sudeste">
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="ES">Espírito Santo</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
 
-            <p>
-                <label for="iprof">Profissão:</label>
-                <input type="text" name="prof" id="iprof" list="lstprof" placeholder="Digite caso não esteja na lista" size="25">
-                <datalist id="lstprof">
-                    <option>Administrador</option>
-                    <option>Contador</option>
-                    <option>Engenheiro</option>
-                    <option>Professor</option>
-                </datalist>
-            </p>
+            <fieldset>
+                <legend>Datalist</legend>
+                <p>
+                    <label for="iprof">Profissão:</label>
+                    <input type="text" name="prof" id="iprof" list="lstprof" placeholder="Digite caso não esteja na lista" size="25">
+                    <datalist id="lstprof">
+                        <option>Administrador</option>
+                        <option>Contador</option>
+                        <option>Engenheiro</option>
+                        <option>Professor</option>
+                    </datalist>
+                </p>
+            </fieldset>
 
-            <p>
-                <label for="imsg">Mensagem:</label><br>
-                <textarea name="msg" id="imsg" cols="50" rows="10" placeholder="O que você gostaria de nos dizer?"></textarea>
-            </p>
+            <fieldset>
+                <legend>Textarea</legend>
+                <p>
+                    <label for="imsg">Mensagem:</label><br>
+                    <textarea name="msg" id="imsg" cols="50" rows="10" placeholder="O que você gostaria de nos dizer?"></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Output</legend>
+                <p>
+                    <label for="in1">N1:</label>
+                    <input type="number" name="n1" id="in1" required min="0" max="100" oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)" >
+                </p>
+                <p>
+                    <label for="in2">N2:</label>
+                    <input type="number" name="n2" id="in2" required min="0" max="100" oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+                </p>
+                <p>
+                    <label for="isoma">Soma:</label>
+                    <output name="isoma">0</output>
+                    <!-- A soma não é enviada no formulário. Output serve apenas para exibir dados. -->
+                </p>
+                <br>
+                <p>
+                    <label for="inum">Número: </label>
+                    <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                    <output name="ival" id="ival">5</output>
+                </p>
+                <br>
+                <p>
+                    <label for="iano">Em que ano você nasceu?</label>
+                    <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="CalcIdade()">
+                </p>
+                <p>
+                    <label for="iidade">Idade:</label>
+                    <output name="idade" id="iidade">0</output>
+                </p>
+            </fieldset>
 
             <p>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
             </p>
         </form>
+
+        <script>
+            function CalcIdade() {
+                let atual = new Date().getFullYear()
+                iidade.innerHTML = Number(atual) - Number(iano.value)
+            }
+        </script>
     </body>
 </html>
